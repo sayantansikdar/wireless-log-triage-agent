@@ -1,0 +1,46 @@
+[project]
+name = "local-llm-with-rag"
+version = "0.1.0"
+description = "An application exploring using local LLMs for research"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ollama>=0.6.1",
+    "markitdown[all]>=0.1.4",
+    "pydantic-ai>=1.39.0",
+    "streamlit>=1.52.2",
+    "lancedb>=0.26.0",
+    "watchdog>=6.0.0",
+    "tqdm>=4.67.1",
+    "requests>=2.31.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.10",
+    "pyrefly>=1.1.1",
+    "types-tqdm>=4.67.1",
+    "pytest>=8.0.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "SIM"]
+ignore = []
+
+[tool.ruff.lint.isort]
+known-first-party = ["core", "interfaces"]
+
+[tool.pyrefly]
+project-includes = ["**/*.py"]
+project-excludes = [
+    ".venv",
+    "storage",
+    "__pycache__",
+    "**/__pycache__",
+]
+python-version = "3.13"
+python-platform = "darwin"

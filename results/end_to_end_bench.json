@@ -1,0 +1,13 @@
+{
+  "config": {
+    "llm_model": "mistral",
+    "embedding_model": "nomic-embed-text",
+    "dataset": "eval/golden/test.jsonl"
+  },
+  "aggregate_metrics": {
+    "llm_judge_accuracy": 0.0,
+    "avg_latency": 0.0
+  },
+  "results": [],
+  "notes": "Placeholder. Run bench_retrieval.py with a running Ollama instance to populate real metrics."
+}

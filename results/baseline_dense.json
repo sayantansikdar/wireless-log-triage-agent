@@ -1,0 +1,17 @@
+{
+  "config": {
+    "model": "nomic-embed-text",
+    "k": 10,
+    "split": "test",
+    "run_name": "baseline_dense"
+  },
+  "aggregate_metrics": {
+    "Recall@10": 0.0,
+    "MRR@10": 0.0,
+    "nDCG@10": 0.0,
+    "latency_p50": 0.0,
+    "latency_p95": 0.0
+  },
+  "per_question": [],
+  "notes": "Ollama was not running locally during agent execution. Rerun `uv run eval/retrieval_eval.py` once Ollama is active to populate real baseline metrics."
+}
